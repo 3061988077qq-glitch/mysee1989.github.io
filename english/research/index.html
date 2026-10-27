@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>AIMG</title>
+<script>(() => {
+  const target = new URL("../../research.html", location.href);
+  let language = 'en';
+  try { localStorage.setItem('aimg-v2-lang','en');const saved = localStorage.getItem('aimg-v2-lang'); if (saved === 'en' || saved === 'zh') language = saved; } catch (_) {}
+  target.searchParams.set('lang', language);
+  location.replace(target.href);
+})();</script>
+<noscript>
+<meta http-equiv="refresh" content="0;url=../../research.html?lang=en">
+</noscript>
+</head>
+<body>
+<a href="../../research.html?lang=en">AIMG</a>
+</body>
+</html>
