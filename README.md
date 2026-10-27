@@ -2,7 +2,29 @@
 
 Static Chinese–English website for the Affective Intelligence & Multimodal Group.
 
-## Preview
+## 在线访问 / Live site
+
+**[打开网站 / Visit the website](https://3061988077qq-glitch.github.io/mysee1989.github.io/)**
+
+网站已通过 GitHub Pages 发布，可以直接在浏览器中访问，无需下载仓库或启动本地服务。
+The website is published on GitHub Pages and can be opened directly in a browser.
+
+点击页面上的「中文 / English」切换语言；所选语言会在站内页面之间保持。
+外观默认跟随系统，也可以手动选择日间或夜间模式。
+
+## 发布 / Deployment
+
+GitHub Pages 从本仓库的 `master` 分支、`/ (root)` 目录发布。
+提交合并到 `master` 后，GitHub 会自动构建并更新线上网站；发布状态可在
+[Actions](https://github.com/3061988077qq-glitch/mysee1989.github.io/actions) 中查看。
+
+GitHub Pages publishes from `master` at `/ (root)`. Updates to `master` trigger
+an automatic deployment. This fork has its own site URL, separate from the upstream site.
+
+## 本地开发预览 / Local development preview
+
+以下命令仅供修改代码时在本机预览；访问已发布的网站请使用上方在线链接。
+The following steps are only for local development.
 
 Run from the repository root:
 
@@ -50,6 +72,6 @@ node tests/preferences.test.cjs
 python3 scripts/check-site.py
 ```
 
-Before deployment, review the Chinese and English pages, both appearance modes,
-and video playback in the intended browsers. Merging a PR does not itself enable
-GitHub Pages on a fork; configure Pages separately if a preview deployment is needed.
+Before merging changes, review the Chinese and English pages, both appearance modes,
+and video playback in the intended browsers. After deployment, verify the live site
+using the GitHub Pages link above.
