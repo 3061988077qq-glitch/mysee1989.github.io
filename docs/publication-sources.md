@@ -33,6 +33,7 @@ Original thumbnail sources
 - TICoE. [Figure 2](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Beyond_Text_Prompts_Precise_Concept_Erasure_through_Text-Image_Collaboration_CVPR_2026_paper.pdf#page=4)
 - HiVA. [Figure 2](https://arxiv.org/pdf/2602.14425#page=4)
 - SSM. [Figure 2](https://arxiv.org/pdf/2604.10541#page=4)
+- Sera. Figure 2 (PDF page 4) · [NTU repository, published version](https://hdl.handle.net/10356/202556) · [ACM paper](https://doi.org/10.1145/3746027.3754775)
 - GPRN. [Figure 2](https://arxiv.org/pdf/2501.00303#page=4)
 - ReAtCo. [Figure 2](https://arxiv.org/pdf/2412.11710#page=4)
 - EmT. [Figure 1](https://arxiv.org/pdf/2406.18345#page=3) · [Publication (CC BY 4.0)](https://ieeexplore.ieee.org/document/10960695/)
@@ -50,5 +51,4 @@ Original figure pending
 - Training-Free Controllable Text-Guided Video Editing (TraFrCo)
 - RGCDNet
 - Triplet Contrastive Learning for Multiobject Tracking in Satellite Videos (TCLTracker)
-- Sera
 - Transfer Vision Patterns for Multi-Task Pixel Learning
