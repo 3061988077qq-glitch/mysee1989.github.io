@@ -1,6 +1,6 @@
 # Publication sources
 
-On 2026-11-04, the [Google Scholar profile of Yong Li](https://scholar.google.com/citations?user=HRBTJYYAAAAJ&hl=en) displayed 62 records. This update adds 20 works (11 in A venues and 9 in B venues), checked against the [final seventh edition of the CCF directory](https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml) and publisher or conference records. The existing 18 entries are retained. The 20 added entries have clickable method diagrams. Nineteen are simplified diagrams based on the authors’ method descriptions. EmT uses the authors’ original architecture diagram.
+On 2026-11-04, the [Google Scholar profile of Yong Li](https://scholar.google.com/citations?user=HRBTJYYAAAAJ&hl=en) displayed 62 records. This update adds 20 works (11 in A venues and 9 in B venues), checked against the [final seventh edition of the CCF directory](https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml) and publisher or conference records. The existing 18 entries are retained. Fourteen added entries display the original figures from the published papers, author preprints, or publisher figure assets. The other six entries link to the paper without a thumbnail.
 
 Journal entries use the publisher's issue year where available. Conference entries are full papers in the main program. LEAF is labeled as accepted and links to the NeurIPS conference program. Preprints already represented by a verified publication are included once; preprints without a verified eligible venue, workshops, short papers and venues outside A/B are excluded from this update. For example, the [MER 2025 paper](https://doi.org/10.1145/3746027.3762007) is labeled a short paper by ACM.
 
@@ -27,25 +27,28 @@ Journal entries use the publisher's issue year where available. Conference entri
 | 2021 | ACM MM | A | [Transfer Vision Patterns for Multi-Task Pixel Learning](https://doi.org/10.1145/3474085.3475501) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:8k81kl-MbHgC) |
 | 2021 | TIP | A | [Localizing Anomalies From Weakly-Labeled Videos](https://doi.org/10.1109/TIP.2021.3072863) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:LkGwnXOMwfcC) |
 
-Method diagram references:
+Original thumbnail sources
 
-- [LEAF](https://leaf-bci.github.io/docs/)
-- [TICoE](https://arxiv.org/abs/2604.15829)
-- [HiVA](https://arxiv.org/abs/2602.14425)
-- [SSM](https://arxiv.org/abs/2604.10541)
-- [PersonalityLLM](https://aip.seu.edu.cn/2026/0416/c54088a562964/page.htm)
-- [TraFrCo](https://doi.org/10.1109/TCSVT.2026.3652425)
-- [RGCDNet](https://doi.org/10.1109/TGRS.2026.3683370)
-- [TCLTracker](https://doi.org/10.1109/TGRS.2026.3675693)
-- [Sera](https://doi.org/10.1145/3746027.3754775)
-- [GPRN](https://ojs.aaai.org/index.php/AAAI/article/view/32695)
-- [ReAtCo](https://ojs.aaai.org/index.php/AAAI/article/view/32876)
-- EmT. Original architecture diagram by Yi Ding et al., Figure 1, © 2025 the authors, reused unmodified under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [Paper](https://ieeexplore.ieee.org/document/10960695/) · [Author-supplied image](https://github.com/yi-ding-cs/EmT/blob/main/EmT.png)
-- [CGaG](https://doi.org/10.1016/j.patcog.2024.111244)
-- [2DRCL](https://proceedings.neurips.cc/paper_files/paper/2024/hash/470629a47e2d65ce0606c40055df5d26-Abstract-Conference.html)
-- [TCVE](https://arxiv.org/abs/2308.09091)
-- [Meta Prototype Network](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Learning_Normal_Dynamics_in_Videos_With_Meta_Prototype_Network_CVPR_2021_paper.html)
-- [SDD-FIQA](https://arxiv.org/abs/2103.05977)
-- [Instance-level false-positive regularization](https://openaccess.thecvf.com/content/CVPR2021/html/Xu_Consistent_Instance_False_Positive_Improves_Fairness_in_Face_Recognition_CVPR_2021_paper.html)
-- [Vision pattern transformation](https://www.sigmm.org/opentoc/MM2021-TOC)
-- [WSAL](https://pubmed.ncbi.nlm.nih.gov/33872149/)
+- LEAF. [Figure 2](https://arxiv.org/pdf/2509.24302#page=4)
+- TICoE. [Figure 2](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Beyond_Text_Prompts_Precise_Concept_Erasure_through_Text-Image_Collaboration_CVPR_2026_paper.pdf#page=4)
+- HiVA. [Figure 2](https://arxiv.org/pdf/2602.14425#page=4)
+- SSM. [Figure 2](https://arxiv.org/pdf/2604.10541#page=4)
+- GPRN. [Figure 2](https://arxiv.org/pdf/2501.00303#page=4)
+- ReAtCo. [Figure 2](https://arxiv.org/pdf/2412.11710#page=4)
+- EmT. [Figure 1](https://arxiv.org/pdf/2406.18345#page=3) · [Publication (CC BY 4.0)](https://ieeexplore.ieee.org/document/10960695/)
+- CGaG. [Figure 2](https://ars.els-cdn.com/content/image/1-s2.0-S0031320324009956-gr2_lrg.jpg)
+- 2DRCL. [Figure 1](https://www.proceedings.com/content/079/079017-1272open.pdf#page=3)
+- TCVE. [Figure 2](https://arxiv.org/pdf/2308.09091#page=3)
+- Meta Prototype Network. [Figure 1](https://arxiv.org/pdf/2104.06689#page=2)
+- SDD-FIQA. [Figure 2](https://openaccess.thecvf.com/content/CVPR2021/papers/Ou_SDD-FIQA_Unsupervised_Face_Image_Quality_Assessment_With_Similarity_Distribution_Distance_CVPR_2021_paper.pdf#page=2)
+- Instance-level false-positive regularization. [Figure 2](https://openaccess.thecvf.com/content/CVPR2021/papers/Xu_Consistent_Instance_False_Positive_Improves_Fairness_in_Face_Recognition_CVPR_2021_paper.pdf#page=3)
+- WSAL. [Figure 2](https://arxiv.org/pdf/2008.08944#page=4)
+
+Original figure pending
+
+- PersonalityLLM
+- Training-Free Controllable Text-Guided Video Editing (TraFrCo)
+- RGCDNet
+- Triplet Contrastive Learning for Multiobject Tracking in Satellite Videos (TCLTracker)
+- Sera
+- Transfer Vision Patterns for Multi-Task Pixel Learning
