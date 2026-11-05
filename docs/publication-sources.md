@@ -1,0 +1,54 @@
+# Publication sources
+
+On 2026-11-04, the [Google Scholar profile of Yong Li](https://scholar.google.com/citations?user=HRBTJYYAAAAJ&hl=en) displayed 62 records. This update adds 20 works (11 in A venues and 9 in B venues), checked against the [final seventh edition of the CCF directory](https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml) and publisher or conference records. The existing 18 entries are retained. Fourteen added entries display the original figures from the published papers, author preprints, or publisher figure assets. The other six entries link to the paper without a thumbnail.
+
+Journal entries use the publisher's issue year where available. Conference entries are full papers in the main program. LEAF is labeled as accepted and links to the NeurIPS conference program. Preprints already represented by a verified publication are included once; preprints without a verified eligible venue, workshops, short papers and venues outside A/B are excluded from this update. For example, the [MER 2025 paper](https://doi.org/10.1145/3746027.3762007) is labeled a short paper by ACM.
+
+| Year | Venue | CCF | Publisher or proceedings record | Google Scholar |
+| --- | --- | --- | --- | --- |
+| 2026 | NeurIPS | A | [LEAF: Language-EEG Aligned Foundation Model for Brain-Computer Interfaces](https://neurips.cc/virtual/2026/poster/154809) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:35N4QoGY0k4C) |
+| 2026 | CVPR | A | [Beyond Text Prompts: Precise Concept Erasure through Text-Image Collaboration](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Beyond_Text_Prompts_Precise_Concept_Erasure_through_Text-Image_Collaboration_CVPR_2026_paper.pdf) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:vV6vV6tmYwMC) |
+| 2026 | TAC | B | [Hierarchical Vision-Language Interaction for Facial Action Unit Detection](https://doi.org/10.1109/TAFFC.2026.3665903) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:RGFaLdJalmkC) |
+| 2026 | TAC | B | [Bidirectional Learning of Facial Action Units and Expressions Via Structured Semantic Mapping Across Heterogeneous Datasets](https://doi.org/10.1109/TAFFC.2026.3722867) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:J_g5lzvAfSwC) |
+| 2026 | TAC | B | [PersonalityLLM: Fine-Tuning Large Language Models for Personality Assessment From Asynchronous Video Interviews](https://doi.org/10.1109/TAFFC.2026.3684073) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:RYcK_YlVTxYC) |
+| 2026 | TCSVT | B | [Training-Free Controllable Text-Guided Video Editing](https://doi.org/10.1109/TCSVT.2026.3652425) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:GnPB-g6toBAC) |
+| 2026 | TGRS | B | [RGCDNet: Radiometric–Geometric Collaborative Learning for Change Detection in Remote Sensing](https://doi.org/10.1109/TGRS.2026.3683370) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:lSLTfruPkqcC) |
+| 2026 | TGRS | B | [Triplet Contrastive Learning for Multiobject Tracking in Satellite Videos](https://doi.org/10.1109/TGRS.2026.3675693) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:NaGl4SEjCO4C) |
+| 2025 | ACM MM | A | [Sera: Separated Coarse-to-fine Representation Alignment for Cross-subject EEG-based Emotion Recognition](https://doi.org/10.1145/3746027.3754775) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:NMxIlDl6LWMC) |
+| 2025 | AAAI | A | [SAM-Aware Graph Prompt Reasoning Network for Cross-Domain Few-Shot Segmentation](https://doi.org/10.1609/aaai.v39i6.32695) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:k_IJM867U9cC) |
+| 2025 | AAAI | A | [Re-Attentional Controllable Video Diffusion Editing](https://doi.org/10.1609/aaai.v39i8.32876) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:j3f4tGmQtD8C) |
+| 2025 | TNNLS | B | [EmT: A Novel Transformer for Generalized Cross-Subject EEG Emotion Recognition](https://doi.org/10.1109/TNNLS.2025.3552603) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:e5wmG9Sq2KIC) |
+| 2025 | PR | B | [Collaborative contrastive learning for cross-domain gaze estimation](https://doi.org/10.1016/j.patcog.2024.111244) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:r0BpntZqJG4C) |
+| 2024 | NeurIPS | A | [Long-tailed Object Detection Pretraining: Dynamic Rebalancing Contrastive Learning with Dual Reconstruction](https://proceedings.neurips.cc/paper_files/paper/2024/hash/470629a47e2d65ce0606c40055df5d26-Abstract-Conference.html) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:4JMBOYKVnBMC) |
+| 2024 | TOMM | B | [Edit Temporal-Consistent Videos with Image Diffusion Model](https://doi.org/10.1145/3691344) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:9ZlFYXVOiuMC) |
+| 2021 | CVPR | A | [Learning Normal Dynamics in Videos With Meta Prototype Network](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Learning_Normal_Dynamics_in_Videos_With_Meta_Prototype_Network_CVPR_2021_paper.html) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:UebtZRa9Y70C) |
+| 2021 | CVPR | A | [SDD-FIQA: Unsupervised Face Image Quality Assessment With Similarity Distribution Distance](https://openaccess.thecvf.com/content/CVPR2021/papers/Ou_SDD-FIQA_Unsupervised_Face_Image_Quality_Assessment_With_Similarity_Distribution_Distance_CVPR_2021_paper.pdf) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:ufrVoPGSRksC) |
+| 2021 | CVPR | A | [Consistent Instance False Positive Improves Fairness in Face Recognition](https://openaccess.thecvf.com/content/CVPR2021/html/Xu_Consistent_Instance_False_Positive_Improves_Fairness_in_Face_Recognition_CVPR_2021_paper.html) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:Se3iqnhoufwC) |
+| 2021 | ACM MM | A | [Transfer Vision Patterns for Multi-Task Pixel Learning](https://doi.org/10.1145/3474085.3475501) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:8k81kl-MbHgC) |
+| 2021 | TIP | A | [Localizing Anomalies From Weakly-Labeled Videos](https://doi.org/10.1109/TIP.2021.3072863) | [Record](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=HRBTJYYAAAAJ&citation_for_view=HRBTJYYAAAAJ:LkGwnXOMwfcC) |
+
+Original thumbnail sources
+
+- LEAF. [Figure 2](https://arxiv.org/pdf/2509.24302#page=4)
+- TICoE. [Figure 2](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Beyond_Text_Prompts_Precise_Concept_Erasure_through_Text-Image_Collaboration_CVPR_2026_paper.pdf#page=4)
+- HiVA. [Figure 2](https://arxiv.org/pdf/2602.14425#page=4)
+- SSM. [Figure 2](https://arxiv.org/pdf/2604.10541#page=4)
+- Sera. Figure 2 (PDF page 4) · [NTU repository, published version](https://hdl.handle.net/10356/202556) · [ACM paper](https://doi.org/10.1145/3746027.3754775)
+- GPRN. [Figure 2](https://arxiv.org/pdf/2501.00303#page=4)
+- ReAtCo. [Figure 2](https://arxiv.org/pdf/2412.11710#page=4)
+- EmT. [Figure 1](https://arxiv.org/pdf/2406.18345#page=3) · [Publication (CC BY 4.0)](https://ieeexplore.ieee.org/document/10960695/)
+- CGaG. [Figure 2](https://ars.els-cdn.com/content/image/1-s2.0-S0031320324009956-gr2_lrg.jpg)
+- 2DRCL. [Figure 1](https://www.proceedings.com/content/079/079017-1272open.pdf#page=3)
+- TCVE. [Figure 2](https://arxiv.org/pdf/2308.09091#page=3)
+- Meta Prototype Network. [Figure 1](https://arxiv.org/pdf/2104.06689#page=2)
+- SDD-FIQA. [Figure 2](https://openaccess.thecvf.com/content/CVPR2021/papers/Ou_SDD-FIQA_Unsupervised_Face_Image_Quality_Assessment_With_Similarity_Distribution_Distance_CVPR_2021_paper.pdf#page=2)
+- Instance-level false-positive regularization. [Figure 2](https://openaccess.thecvf.com/content/CVPR2021/papers/Xu_Consistent_Instance_False_Positive_Improves_Fairness_in_Face_Recognition_CVPR_2021_paper.pdf#page=3)
+- WSAL. [Figure 2](https://arxiv.org/pdf/2008.08944#page=4)
+
+Original figure pending
+
+- PersonalityLLM
+- Training-Free Controllable Text-Guided Video Editing (TraFrCo)
+- RGCDNet
+- Triplet Contrastive Learning for Multiobject Tracking in Satellite Videos (TCLTracker)
+- Transfer Vision Patterns for Multi-Task Pixel Learning

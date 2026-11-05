@@ -5,6 +5,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import argparse
 import json
+import re
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = ['index.html', 'research.html', 'papers.html', 'people.html', 'contact.html',
@@ -47,12 +48,23 @@ for name in PAGES:
     if any(symbol in text for symbol in ('↗', '↓', '→')):
         errors.append(f'{name}: decorative arrow')
 
-publication_page = Page()
-publication_page.feed((ROOT / 'papers.html').read_text())
-count = sum(tag == 'article' and 'paper' in attrs.get('class', '').split()
-            for tag, attrs in publication_page.elements)
-if count != 18:
-    errors.append(f'Expected 18 original publications, got {count}')
+papers = (ROOT / 'papers.html').read_text()
+article_pattern = r'<article class="paper">'
+count = len(re.findall(article_pattern, papers))
+if (f'data-zh="{count} 篇研究成果" data-en="{count} publications">{count} 篇研究成果' not in papers):
+    errors.append(f'papers.html: the bilingual publication count must match the {count} articles')
+
+groups = re.findall(r'<section class="paper-group" id="(\d{4})">(.*?)</section>', papers, re.S)
+sidebar = re.findall(r'<a href="#(\d{4})">\1<span>(\d+)</span>', papers)
+expected_sidebar = []
+for year, body in groups:
+    group_count = len(re.findall(article_pattern, body))
+    expected_sidebar.append((year, f'{group_count:02}'))
+    if not group_count or f'<h2>{year}</h2>\n<span>{group_count:02}</span>' not in body:
+        errors.append(f'papers.html: incorrect heading or count for {year}')
+if (not count or sum(int(number) for _, number in expected_sidebar) != count
+        or sidebar != expected_sidebar or len({year for year, _ in groups}) != len(groups)):
+    errors.append('papers.html: publication groups and year navigation must match')
 if errors:
     raise SystemExit('\n'.join(errors))
-print(f'PASS: {len(PAGES)} bilingual pages, shared appearance controls, relative assets, and 18 publications.')
+print(f'PASS: {len(PAGES)} bilingual pages, shared appearance controls, relative assets, and {count} publications with matching year counts.')
