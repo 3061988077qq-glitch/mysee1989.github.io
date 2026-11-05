@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 220" width="350" height="220" role="img" aria-label="Eeg Emotion Recognition">
+  <defs><pattern id="grid" width="15" height="15" patternUnits="userSpaceOnUse"><path d="M15 0H0V15" fill="none" stroke="#e6edef"/></pattern></defs>
+  <rect width="350" height="220" fill="#f3f7f7"/>
+  <rect x="1" y="1" width="348" height="218" fill="url(#grid)" stroke="#dce6e8"/>
+  <g>
+    <rect x="43" y="55" width="112" height="79" rx="8" fill="#dbece7" stroke="#cbd7dc" stroke-width="1.5"/>
+    <g transform="translate(53 76) scale(0.84)">
+    <path d="M0 0h10l6 -9 7 16 9 -22 8 17 7 -7 7 5h15l7 -9 8 13 7 -8 6 4h10" fill="none" stroke="#287b74" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <g transform="translate(53 99) scale(0.84)">
+    <path d="M0 0h10l6 -9 7 16 9 -22 8 17 7 -7 7 5h15l7 -9 8 13 7 -8 6 4h10" fill="none" stroke="#335a79" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <g transform="translate(53 120) scale(0.84)">
+    <path d="M0 0h10l6 -9 7 16 9 -22 8 17 7 -7 7 5h15l7 -9 8 13 7 -8 6 4h10" fill="none" stroke="#287b74" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <path d="M157 94L187 94" fill="none" stroke="#335a79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="174" cy="94" r="5" fill="#b67541"/>
+    <g transform="translate(224 89) scale(1)">
+    <path d="M0 0L-21 -25" fill="none" stroke="#cbd7dc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 0L12 -28" fill="none" stroke="#cbd7dc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 0L31 -10" fill="none" stroke="#cbd7dc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 0L26 22" fill="none" stroke="#cbd7dc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M0 0L-9 28" fill="none" stroke="#cbd7dc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M-21 -25L12 -28" fill="none" stroke="#cbd7dc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M12 -28L31 -10" fill="none" stroke="#cbd7dc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M31 -10L26 22" fill="none" stroke="#cbd7dc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M26 22L-9 28" fill="none" stroke="#cbd7dc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="0" cy="0" r="6" fill="#335a79"/>
+    <circle cx="-21" cy="-25" r="4.5" fill="#287b74"/>
+    <circle cx="12" cy="-28" r="4.5" fill="#b67541"/>
+    <circle cx="31" cy="-10" r="4.5" fill="#335a79"/>
+    <circle cx="26" cy="22" r="4.5" fill="#287b74"/>
+    <circle cx="-9" cy="28" r="4.5" fill="#b67541"/>
+    </g>
+    <circle cx="276" cy="94" r="5" fill="#287b74"/>
+    <circle cx="290" cy="94" r="5" fill="#b67541"/>
+    <circle cx="304" cy="94" r="5" fill="#335a79"/>
+  </g>
+  <path d="M28 170H322" fill="none" stroke="#cbd7dc" stroke-width="1.3"/>
+  <rect x="28" y="187" width="17" height="3" fill="#287b74"/>
+  <text x="53" y="195" fill="#33536a" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.1">EEG EMOTION RECOGNITION</text>
+</svg>
