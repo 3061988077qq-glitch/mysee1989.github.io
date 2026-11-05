@@ -1,29 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 220" width="350" height="220" role="img" aria-label="Long-Tailed Object Detection">
-  <defs><pattern id="grid" width="15" height="15" patternUnits="userSpaceOnUse"><path d="M15 0H0V15" fill="none" stroke="#e6edef"/></pattern></defs>
-  <rect width="350" height="220" fill="#f3f7f7"/>
-  <rect x="1" y="1" width="348" height="218" fill="url(#grid)" stroke="#dce6e8"/>
-  <g>
-    <g transform="translate(39 57) scale(1)">
-    <rect x="0" y="0" width="100" height="78" rx="8" fill="#fbfcfb" stroke="#cbd7dc" stroke-width="1.5"/>
-    <path d="M7 69L31.0 39.78 49.0 52.260000000000005 66.0 28.86 94 69Z" fill="#deebf2" stroke="#335a79" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
-    <circle cx="84" cy="17" r="5" fill="#b67541"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="title desc">
+  <title id="title">2DRCL method overview</title>
+  <desc id="desc">Dynamic rebalancing increases the contribution of tail classes. Simplified from https://proceedings.neurips.cc/paper_files/paper/2024/hash/470629a47e2d65ce0606c40055df5d26-Abstract-Conference.html.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#647c90"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="638" height="358" rx="4" fill="#fff" stroke="#cdd8df" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" fill="#243b51">
+    <text x="20" y="35" font-size="24" font-weight="700">2DRCL</text>
+    <text x="20" y="58" font-size="12" font-weight="700" letter-spacing="1.4" fill="#557589">METHOD OVERVIEW</text>
+    <path d="M20 70H620 M20 308H620" stroke="#d7e0e6"/>
+    <g stroke="#647c90" stroke-width="2" fill="none">
+    <path d="M149.8 189.0 C164.3 189.0 162.2 147.0 174.8 147.0" marker-end="url(#arrow)"/>
+    <path d="M149.8 189.0 C164.3 189.0 162.2 231.0 174.8 231.0" marker-end="url(#arrow)"/>
+    <path d="M306.5 147.0 C321.1 147.0 318.9 147.0 331.5 147.0" marker-end="url(#arrow)"/>
+    <path d="M306.5 231.0 C321.1 231.0 318.9 147.0 331.5 147.0" marker-end="url(#arrow)"/>
+    <path d="M306.5 147.0 C321.1 147.0 318.9 231.0 331.5 231.0" marker-end="url(#arrow)"/>
+    <path d="M306.5 231.0 C321.1 231.0 318.9 231.0 331.5 231.0" marker-end="url(#arrow)"/>
+    <path d="M463.2 147.0 C477.8 147.0 475.7 189.0 488.2 189.0" marker-end="url(#arrow)"/>
+    <path d="M463.2 231.0 C477.8 231.0 475.7 189.0 488.2 189.0" marker-end="url(#arrow)"/>
     </g>
-    <path d="M52 78v-9h9m51 0h9v9m0 37v9h-9m-51 0h-9v-9" fill="none" stroke="#287b74" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" />
-    <rect x="159" y="68" width="7" height="59" rx="1" fill="#335a79" stroke="#335a79" stroke-width="1.5"/>
-    <rect x="171" y="83" width="7" height="44" rx="1" fill="#335a79" stroke="#335a79" stroke-width="1.5"/>
-    <rect x="183" y="93" width="7" height="34" rx="1" fill="#335a79" stroke="#335a79" stroke-width="1.5"/>
-    <rect x="195" y="103" width="7" height="24" rx="1" fill="#335a79" stroke="#335a79" stroke-width="1.5"/>
-    <rect x="207" y="109" width="7" height="18" rx="1" fill="#287b74" stroke="#287b74" stroke-width="1.5"/>
-    <rect x="219" y="113" width="7" height="14" rx="1" fill="#287b74" stroke="#287b74" stroke-width="1.5"/>
-    <rect x="231" y="117" width="7" height="10" rx="1" fill="#287b74" stroke="#287b74" stroke-width="1.5"/>
-    <rect x="243" y="118" width="7" height="9" rx="1" fill="#287b74" stroke="#287b74" stroke-width="1.5"/>
-    <rect x="255" y="120" width="7" height="7" rx="1" fill="#b67541" stroke="#b67541" stroke-width="1.5"/>
-    <rect x="267" y="121" width="7" height="6" rx="1" fill="#b67541" stroke="#b67541" stroke-width="1.5"/>
-    <rect x="279" y="122" width="7" height="5" rx="1" fill="#b67541" stroke="#b67541" stroke-width="1.5"/>
-    <rect x="291" y="123" width="7" height="4" rx="1" fill="#b67541" stroke="#b67541" stroke-width="1.5"/>
-    <path d="M155 129L302 129" fill="none" stroke="#cbd7dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="20.0" y="156.0" width="129.8" height="66" rx="6" fill="#f0f4f8" stroke="#738ca3"/>
+    <text x="84.9" y="185.6" text-anchor="middle" font-size="16">Long-tailed</text>
+    <text x="84.9" y="202.6" text-anchor="middle" font-size="16">training images</text>
+    <rect x="176.8" y="114.0" width="129.8" height="66" rx="6" fill="#eaf4f3" stroke="#6a9994"/>
+    <text x="241.6" y="143.6" text-anchor="middle" font-size="16">Holistic</text>
+    <text x="241.6" y="160.6" text-anchor="middle" font-size="16">contrast</text>
+    <rect x="176.8" y="198.0" width="129.8" height="66" rx="6" fill="#eaf4f3" stroke="#6a9994"/>
+    <text x="241.6" y="236.1" text-anchor="middle" font-size="16">Local contrast</text>
+    <rect x="333.5" y="114.0" width="129.8" height="66" rx="6" fill="#edf1f9" stroke="#8192af"/>
+    <text x="398.4" y="143.6" text-anchor="middle" font-size="16">Dynamic</text>
+    <text x="398.4" y="160.6" text-anchor="middle" font-size="16">rebalancing</text>
+    <rect x="333.5" y="198.0" width="129.8" height="66" rx="6" fill="#edf1f9" stroke="#8192af"/>
+    <text x="398.4" y="227.6" text-anchor="middle" font-size="16">Dual</text>
+    <text x="398.4" y="244.6" text-anchor="middle" font-size="16">reconstruction</text>
+    <rect x="490.2" y="156.0" width="129.8" height="66" rx="6" fill="#f7f0e6" stroke="#ad8c62"/>
+    <text x="555.1" y="177.1" text-anchor="middle" font-size="16">Pretrained</text>
+    <text x="555.1" y="194.1" text-anchor="middle" font-size="16">detector</text>
+    <text x="555.1" y="211.1" text-anchor="middle" font-size="16">features</text>
+  <text x="20" y="327" font-size="13" fill="#455c6c">Dynamic rebalancing increases the contribution of tail classes.</text>
   </g>
-  <path d="M28 170H322" fill="none" stroke="#cbd7dc" stroke-width="1.3"/>
-  <rect x="28" y="187" width="17" height="3" fill="#287b74"/>
-  <text x="53" y="195" fill="#33536a" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.1">LONG-TAILED OBJECT DETECTION</text>
 </svg>

@@ -136,6 +136,8 @@ html[data-theme-preference="dark"] .theme-icon-dark { display: block; }
 .paper { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 30px; padding: 34px 0; border-bottom: 1px solid var(--line); }
 .paper-image { display: flex; align-items: center; justify-content: center; height: 170px; padding: 12px; background: #fff; border: 1px solid var(--line); overflow: hidden; }
 .paper-image img { width: 100%; height: 100%; object-fit: contain; }
+.paper-figure { display: block; width: 100%; height: 100%; }
+.paper-figure:focus-visible { outline-offset: 2px; }
 .paper-year { align-self: flex-start; display: inline-block; width: fit-content; padding: 3px 7px; border: 1px solid var(--line); border-radius: 2px; color: var(--muted); background: var(--surface-muted); font-size: 12px; font-weight: 600; line-height: 1.4; letter-spacing: .055em; }
 .divider { display: inline-block; width: 12px; height: 1px; margin: 0 5px; background: var(--line-strong); vertical-align: middle; }
 .paper h3 { margin: 14px 0 10px; color: var(--ink); font: 600 22px/1.5 var(--heading); letter-spacing: -.012em; }

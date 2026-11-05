@@ -1,70 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 220" width="350" height="220" role="img" aria-label="Video Anomaly Localization">
-  <defs><pattern id="grid" width="15" height="15" patternUnits="userSpaceOnUse"><path d="M15 0H0V15" fill="none" stroke="#e6edef"/></pattern></defs>
-  <rect width="350" height="220" fill="#f3f7f7"/>
-  <rect x="1" y="1" width="348" height="218" fill="url(#grid)" stroke="#dce6e8"/>
-  <g>
-    <g transform="translate(46 52) scale(1)">
-    <rect x="0" y="0" width="258" height="72" rx="7" fill="#deebf2" stroke="#cbd7dc" stroke-width="1.5"/>
-    <rect x="10" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="10" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="27" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="27" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="44" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="44" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="61" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="61" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="78" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="78" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="95" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="95" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="112" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="112" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="129" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="129" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="146" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="146" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="163" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="163" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="180" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="180" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="197" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="197" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="214" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="214" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="231" y="5" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <rect x="231" y="64" width="10" height="3" rx="1" fill="#8ea7b7" stroke="#8ea7b7" stroke-width="1.5"/>
-    <g transform="translate(12 14) scale(1)">
-    <rect x="0" y="0" width="48" height="44" rx="8" fill="#fbfcfb" stroke="#cbd7dc" stroke-width="1.5"/>
-    <path d="M7 35L14.879999999999999 22.44 23.52 29.48 31.68 16.28 42 35Z" fill="#deebf2" stroke="#335a79" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
-    <circle cx="32" cy="17" r="5" fill="#b67541"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="title desc">
+  <title id="title">WSAL method overview</title>
+  <desc id="desc">Training uses video-level labels. Temporal context captures segment variation. Simplified from https://pubmed.ncbi.nlm.nih.gov/33872149/.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#647c90"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="638" height="358" rx="4" fill="#fff" stroke="#cdd8df" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" fill="#243b51">
+    <text x="20" y="35" font-size="24" font-weight="700">WSAL</text>
+    <text x="20" y="58" font-size="12" font-weight="700" letter-spacing="1.4" fill="#557589">METHOD OVERVIEW</text>
+    <path d="M20 70H620 M20 308H620" stroke="#d7e0e6"/>
+    <g stroke="#647c90" stroke-width="2" fill="none">
+    <path d="M149.8 189.0 C164.3 189.0 162.2 147.0 174.8 147.0" marker-end="url(#arrow)"/>
+    <path d="M149.8 189.0 C164.3 189.0 162.2 231.0 174.8 231.0" marker-end="url(#arrow)"/>
+    <path d="M306.5 147.0 C321.1 147.0 318.9 189.0 331.5 189.0" marker-end="url(#arrow)"/>
+    <path d="M306.5 231.0 C321.1 231.0 318.9 189.0 331.5 189.0" marker-end="url(#arrow)"/>
+    <path d="M463.2 189.0 C477.8 189.0 475.7 189.0 488.2 189.0" marker-end="url(#arrow)"/>
     </g>
-    <g transform="translate(74 14) scale(1)">
-    <rect x="0" y="0" width="48" height="44" rx="8" fill="#fbfcfb" stroke="#cbd7dc" stroke-width="1.5"/>
-    <path d="M7 35L14.879999999999999 22.44 23.52 29.48 31.68 16.28 42 35Z" fill="#deebf2" stroke="#335a79" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
-    <circle cx="32" cy="17" r="5" fill="#b67541"/>
-    </g>
-    <g transform="translate(136 14) scale(1)">
-    <rect x="0" y="0" width="48" height="44" rx="8" fill="#fbfcfb" stroke="#cbd7dc" stroke-width="1.5"/>
-    <rect x="9" y="15" width="30" height="20" rx="3" fill="#dbece7" stroke="#dbece7" stroke-width="1.5"/>
-    <path d="M15 28l16.0 -22 12.0 16 9.6 -9" fill="none" stroke="#287b74" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
-    <circle cx="26" cy="23" r="7" fill="#b67541"/>
-    </g>
-    <g transform="translate(198 14) scale(1)">
-    <rect x="0" y="0" width="48" height="44" rx="8" fill="#fbfcfb" stroke="#cbd7dc" stroke-width="1.5"/>
-    <path d="M7 35L14.879999999999999 22.44 23.52 29.48 31.68 16.28 42 35Z" fill="#deebf2" stroke="#335a79" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
-    <circle cx="32" cy="17" r="5" fill="#b67541"/>
-    </g>
-    </g>
-    <path d="M181 82v-9h9m17 0h9v9m0 9v9h-9m-17 0h-9v-9" fill="none" stroke="#b67541" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M48 141L301 141" fill="none" stroke="#cbd7dc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M173 141L237 141" fill="none" stroke="#b67541" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-    <circle cx="53" cy="141" r="3" fill="#335a79"/>
-    <circle cx="112" cy="141" r="3" fill="#335a79"/>
-    <circle cx="172" cy="141" r="3" fill="#335a79"/>
-    <circle cx="237" cy="141" r="3" fill="#335a79"/>
-    <circle cx="296" cy="141" r="3" fill="#335a79"/>
+    <rect x="20.0" y="156.0" width="129.8" height="66" rx="6" fill="#f0f4f8" stroke="#738ca3"/>
+    <text x="84.9" y="194.1" text-anchor="middle" font-size="16">Video segments</text>
+    <rect x="176.8" y="114.0" width="129.8" height="66" rx="6" fill="#eaf4f3" stroke="#6a9994"/>
+    <text x="241.6" y="135.1" text-anchor="middle" font-size="16">High-order</text>
+    <text x="241.6" y="152.1" text-anchor="middle" font-size="16">temporal</text>
+    <text x="241.6" y="169.1" text-anchor="middle" font-size="16">context</text>
+    <rect x="176.8" y="198.0" width="129.8" height="66" rx="6" fill="#eaf4f3" stroke="#6a9994"/>
+    <text x="241.6" y="219.1" text-anchor="middle" font-size="16">Immediate</text>
+    <text x="241.6" y="236.1" text-anchor="middle" font-size="16">spatial</text>
+    <text x="241.6" y="253.1" text-anchor="middle" font-size="16">semantics</text>
+    <rect x="333.5" y="156.0" width="129.8" height="66" rx="6" fill="#edf1f9" stroke="#8192af"/>
+    <text x="398.4" y="185.6" text-anchor="middle" font-size="16">Aggregate</text>
+    <text x="398.4" y="202.6" text-anchor="middle" font-size="16">segment scores</text>
+    <rect x="490.2" y="156.0" width="129.8" height="66" rx="6" fill="#f7f0e6" stroke="#ad8c62"/>
+    <text x="555.1" y="177.1" text-anchor="middle" font-size="16">Temporal</text>
+    <text x="555.1" y="194.1" text-anchor="middle" font-size="16">anomaly</text>
+    <text x="555.1" y="211.1" text-anchor="middle" font-size="16">locations</text>
+  <text x="20" y="327" font-size="13" fill="#455c6c">Training uses video-level labels. Temporal context captures segment variation.</text>
   </g>
-  <path d="M28 170H322" fill="none" stroke="#cbd7dc" stroke-width="1.3"/>
-  <rect x="28" y="187" width="17" height="3" fill="#287b74"/>
-  <text x="53" y="195" fill="#33536a" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.1">VIDEO ANOMALY LOCALIZATION</text>
 </svg>
