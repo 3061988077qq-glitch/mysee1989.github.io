@@ -120,15 +120,12 @@
   if (topic) {
     const header = document.querySelector('.papers-head');
     const heading = header.querySelector('h1');
-    const intro = header.querySelector('p:not(.eyebrow)');
+    const intro = header.querySelector('.paper-intro');
     heading.dataset.zh = topic.dataset.zh;
     heading.dataset.en = topic.dataset.en;
     document.body.dataset.titleZh = topic.dataset.zh + '相关论著';
     document.body.dataset.titleEn = topic.dataset.en + ' publications';
-    header.querySelector('.topic-back').hidden = false;
-    header.querySelector('.eyebrow').hidden = true;
-    intro.dataset.zh = '本方向的相关论著，按发表年份排列。';
-    intro.dataset.en = 'Publications related to this research area, organized by year.';
+    intro.hidden = requestedTopic !== 'healthcare';
 
     if (requestedTopic === 'healthcare') {
       intro.dataset.zh = '相关基础研究，涵盖脑电信号解码与脑机接口。';
@@ -162,10 +159,7 @@
   const publicationTrack = document.querySelector('#publication-track');
   if (publicationTrack) {
     const cards = [...publicationTrack.querySelectorAll('.publication-card')];
-    const controls = document.querySelector('.publication-controls');
     const pagination = document.querySelector('.publication-pagination');
-    const previous = controls.querySelector('.publication-prev');
-    const next = controls.querySelector('.publication-next');
     const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
     const last = cards.length - 1;
     let active = -1;
@@ -192,8 +186,6 @@
         card.toggleAttribute('data-active', current);
         dots[cardIndex].setAttribute('aria-current', String(current));
       });
-      previous.setAttribute('aria-disabled', String(index === 0));
-      next.setAttribute('aria-disabled', String(index === last));
     }
 
     function syncScroll() {
@@ -224,8 +216,6 @@
       syncScroll();
     }
 
-    previous.addEventListener('click', () => goTo(active - 1));
-    next.addEventListener('click', () => goTo(active + 1));
     publicationTrack.addEventListener('click', event => {
       if (event.detail === 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       const index = cards.indexOf(event.target.closest('.publication-card'));
@@ -260,7 +250,6 @@
     const observer = new ResizeObserver(measureStops);
     observer.observe(publicationTrack);
     measureStops();
-    controls.hidden = last < 1;
     pagination.hidden = last < 1;
     publicationTrack.classList.add('is-ready');
   }
