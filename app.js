@@ -109,10 +109,10 @@
 
   const publicationsHeader = document.querySelector('.papers-head');
   const topicTitles = new Map([
-    ['multimodal', ['多模态理解与生成', 'Multimodal understanding and generation']],
-    ['affective', ['情感感知与推理', 'Affective perception and reasoning']],
-    ['embodied', ['具身智能与数字人', 'Embodied intelligence and digital humans']],
-    ['healthcare', ['智慧医疗与康复评估', 'Intelligent healthcare and rehabilitation assessment']],
+    ['multimodal', ['多模态理解与生成', 'Multimodal Understanding and Generation']],
+    ['affective', ['情感感知与推理', 'Affective Perception and Reasoning']],
+    ['embodied', ['具身智能与数字人', 'Embodied Intelligence and Digital Humans']],
+    ['healthcare', ['智慧医疗与康复评估', 'Intelligent Healthcare and Rehabilitation Assessment']],
   ]);
   const requestedTopic = params.get('topic');
   const topic = publicationsHeader && topicTitles.get(requestedTopic);
@@ -124,7 +124,7 @@
     heading.dataset.zh = titleZh;
     heading.dataset.en = titleEn;
     document.body.dataset.titleZh = titleZh + '相关论著';
-    document.body.dataset.titleEn = titleEn + ' publications';
+    document.body.dataset.titleEn = 'Publications in ' + titleEn;
     intro.hidden = requestedTopic !== 'healthcare';
 
     if (requestedTopic === 'healthcare') {
@@ -174,7 +174,7 @@
       const dot = document.createElement('button');
       dot.type = 'button';
       dot.dataset.ariaZh = `查看第 ${index + 1} 篇论文，共 ${cards.length} 篇 · ${title}`;
-      dot.dataset.ariaEn = `Show paper ${index + 1} of ${cards.length} · ${title}`;
+      dot.dataset.ariaEn = `View publication ${index + 1} of ${cards.length} · ${title}`;
       dot.setAttribute('aria-controls', publicationTrack.id);
       dot.addEventListener('click', () => goTo(index));
       return dot;
