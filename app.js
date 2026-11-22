@@ -1,14 +1,13 @@
 (() => {
   const preferenceKey = 'aimg-v2-lang';
   const valid = value => value === 'en' || value === 'zh';
-  const requested = new URLSearchParams(location.search).get('lang');
+  const params = new URLSearchParams(location.search);
+  const requested = params.get('lang');
   let stored;
   try { stored = localStorage.getItem(preferenceKey); } catch (_) {}
   // The language explicitly selected by the visitor also governs old bookmarks.
   let language = valid(stored) ? stored : (valid(requested) ? requested : 'zh');
   const languageButtons = [...document.querySelectorAll('[data-lang]')];
-  const video = document.querySelector('.hero-video');
-  const videoToggle = document.querySelector('#video-toggle');
   const themeKey = 'aimg-theme';
   const systemTheme = matchMedia('(prefers-color-scheme: dark)');
   const themePicker = document.querySelector('.theme-picker');
@@ -61,14 +60,6 @@
     }
   });
 
-
-  function updateVideoButton() {
-    if (!video || !videoToggle) return;
-    videoToggle.textContent = language === 'en'
-      ? (video.paused ? 'Play background video' : 'Pause background video')
-      : (video.paused ? '播放背景视频' : '暂停背景视频');
-  }
-
   function applyLanguage(next, persist = true) {
     if (!valid(next)) return;
     language = next;
@@ -98,7 +89,6 @@
     const current = new URL(location.href);
     current.searchParams.set('lang', next);
     history.replaceState(null, '', current);
-    updateVideoButton();
     updateThemeControl();
   }
 
@@ -117,40 +107,56 @@
     } catch (_) {}
   });
 
-  if (video && videoToggle) {
-    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-    let allowPlayback = !reducedMotion.matches;
-    let heroVisible = video.getBoundingClientRect().bottom > 0;
-    video.muted = true;
-    video.autoplay = allowPlayback;
-    const syncPlayback = () => {
-      if (allowPlayback && !document.hidden && heroVisible) {
-        video.play().catch(updateVideoButton);
-      } else {
-        video.pause();
-      }
-    };
-    video.addEventListener('play', updateVideoButton);
-    video.addEventListener('pause', updateVideoButton);
-    video.addEventListener('error', () => { videoToggle.hidden = true; }, true);
-    videoToggle.addEventListener('click', () => {
-      allowPlayback = video.paused;
-      syncPlayback();
-    });
-    document.addEventListener('visibilitychange', syncPlayback);
-    window.addEventListener('pageshow', syncPlayback);
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(entries => {
-        heroVisible = entries[0].isIntersecting;
-        syncPlayback();
-      }, { threshold: 0.05 });
-      observer.observe(video);
-    }
-    syncPlayback();
+  const topicNav = document.querySelector('[data-paper-topics]');
+  const filters = topicNav ? [...topicNav.querySelectorAll('[data-topic]')] : [];
+  const requestedTopic = params.get('topic');
+  const topic = filters.find(filter => filter.dataset.topic && filter.dataset.topic === requestedTopic);
+
+  if (topicNav) {
+    topicNav.hidden = false;
+    (topic || filters[0]).setAttribute('aria-current', 'page');
   }
+
+  if (topic) {
+    const header = document.querySelector('.papers-head');
+    const heading = header.querySelector('h1');
+    const intro = header.querySelector('p:not(.eyebrow)');
+    heading.dataset.zh = topic.dataset.zh;
+    heading.dataset.en = topic.dataset.en;
+    document.body.dataset.titleZh = topic.dataset.zh + '相关论著';
+    document.body.dataset.titleEn = topic.dataset.en + ' publications';
+    header.querySelector('.topic-back').hidden = false;
+    header.querySelector('.eyebrow').hidden = true;
+    intro.dataset.zh = '本方向的相关论著，按发表年份排列。';
+    intro.dataset.en = 'Publications related to this research area, organized by year.';
+
+    if (requestedTopic === 'healthcare') {
+      intro.dataset.zh = '相关基础研究，涵盖脑电信号解码与脑机接口。';
+      intro.dataset.en = 'Related foundational work on EEG decoding and brain–computer interfaces.';
+    }
+
+    let count = 0;
+    document.querySelectorAll('.paper-group').forEach(group => {
+      let yearCount = 0;
+      group.querySelectorAll('.paper').forEach(paper => {
+        paper.hidden = !paper.matches(`[data-topics~="${topic.dataset.topic}"]`);
+        if (!paper.hidden) yearCount++;
+      });
+      const yearLink = document.querySelector(`.paper-layout aside a[href="#${group.id}"]`);
+      group.hidden = yearLink.hidden = yearCount === 0;
+      group.querySelector('.year-title span').textContent = yearCount;
+      yearLink.querySelector('span').textContent = yearCount;
+      count += yearCount;
+    });
+    const countLabel = header.querySelector('.paper-count');
+    countLabel.dataset.zh = `${count} 篇相关论著`;
+    countLabel.dataset.en = `${count} related publications`;
+  }
+
   document.querySelectorAll('.nav a[data-local-link]').forEach(anchor => {
     const target = new URL(anchor.getAttribute('href'), location.href);
-    if (target.pathname === location.pathname) anchor.setAttribute('aria-current', 'page');
+    if (topic && target.pathname.endsWith('/research.html')) anchor.setAttribute('aria-current', 'location');
+    if (!topic && target.pathname === location.pathname) anchor.setAttribute('aria-current', 'page');
   });
 
   const publicationTrack = document.querySelector('#publication-track');
