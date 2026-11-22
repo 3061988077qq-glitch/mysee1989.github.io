@@ -107,24 +107,24 @@
     } catch (_) {}
   });
 
-  const topicNav = document.querySelector('[data-paper-topics]');
-  const filters = topicNav ? [...topicNav.querySelectorAll('[data-topic]')] : [];
+  const publicationsHeader = document.querySelector('.papers-head');
+  const topicTitles = new Map([
+    ['multimodal', ['多模态理解与生成', 'Multimodal understanding and generation']],
+    ['affective', ['情感感知与推理', 'Affective perception and reasoning']],
+    ['embodied', ['具身智能与数字人', 'Embodied intelligence and digital humans']],
+    ['healthcare', ['智慧医疗与康复评估', 'Intelligent healthcare and rehabilitation assessment']],
+  ]);
   const requestedTopic = params.get('topic');
-  const topic = filters.find(filter => filter.dataset.topic && filter.dataset.topic === requestedTopic);
-
-  if (topicNav) {
-    topicNav.hidden = false;
-    (topic || filters[0]).setAttribute('aria-current', 'page');
-  }
+  const topic = publicationsHeader && topicTitles.get(requestedTopic);
 
   if (topic) {
-    const header = document.querySelector('.papers-head');
-    const heading = header.querySelector('h1');
-    const intro = header.querySelector('.paper-intro');
-    heading.dataset.zh = topic.dataset.zh;
-    heading.dataset.en = topic.dataset.en;
-    document.body.dataset.titleZh = topic.dataset.zh + '相关论著';
-    document.body.dataset.titleEn = topic.dataset.en + ' publications';
+    const [titleZh, titleEn] = topic;
+    const heading = publicationsHeader.querySelector('h1');
+    const intro = publicationsHeader.querySelector('.paper-intro');
+    heading.dataset.zh = titleZh;
+    heading.dataset.en = titleEn;
+    document.body.dataset.titleZh = titleZh + '相关论著';
+    document.body.dataset.titleEn = titleEn + ' publications';
     intro.hidden = requestedTopic !== 'healthcare';
 
     if (requestedTopic === 'healthcare') {
@@ -136,7 +136,7 @@
     document.querySelectorAll('.paper-group').forEach(group => {
       let yearCount = 0;
       group.querySelectorAll('.paper').forEach(paper => {
-        paper.hidden = !paper.matches(`[data-topics~="${topic.dataset.topic}"]`);
+        paper.hidden = !paper.matches(`[data-topics~="${requestedTopic}"]`);
         if (!paper.hidden) yearCount++;
       });
       const yearLink = document.querySelector(`.paper-layout aside a[href="#${group.id}"]`);
@@ -145,7 +145,7 @@
       yearLink.querySelector('span').textContent = yearCount;
       count += yearCount;
     });
-    const countLabel = header.querySelector('.paper-count');
+    const countLabel = publicationsHeader.querySelector('.paper-count');
     countLabel.dataset.zh = `${count} 篇相关论著`;
     countLabel.dataset.en = `${count} related publications`;
   }
