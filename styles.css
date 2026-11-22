@@ -9,6 +9,7 @@
   --text: #404e5e;
   --muted: #526176;
   --accent: #2b526e;
+  --particle: #213e58;
   --line: #ded8cd;
   --line-strong: #a89f90;
   --hover: #eee9df;
@@ -27,6 +28,7 @@ html[data-theme="dark"] {
   --text: #ccd7e2;
   --muted: #aebdce;
   --accent: #b3cde4;
+  --particle: #b3cde4;
   --line: #38495d;
   --line-strong: #74879c;
   --hover: #293b50;
@@ -99,7 +101,7 @@ html[data-theme-preference="dark"] .theme-icon-dark { display: block; }
   z-index: -1;
   width: 100%;
   height: 100%;
-  color: var(--accent);
+  color: var(--particle);
   pointer-events: none;
 }
 .home-content { width: 100%; padding-block: 66px 92px; text-align: center; }
@@ -302,6 +304,32 @@ html[data-theme-preference="dark"] .theme-icon-dark { display: block; }
   color: var(--ink);
   font: 600 clamp(32px, 4.2vw, 50px)/1.18 var(--heading);
 }
+.publication-controls { display: flex; gap: 9px; }
+.publication-controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+}
+.publication-controls button:not([aria-disabled="true"]):hover { background: var(--hover); }
+.publication-controls button[aria-disabled="true"] { opacity: .42; cursor: default; }
+.publication-arrow { position: relative; width: 18px; height: 1.5px; background: currentColor; }
+.publication-arrow::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto auto;
+  width: 7px;
+  height: 7px;
+  border-top: 1.5px solid;
+  border-right: 1.5px solid;
+  transform: translateY(-50%) rotate(45deg);
+}
+.publication-prev .publication-arrow { transform: rotate(180deg); }
+
 .publication-track {
   --publication-width: 79%;
   --publication-gap: clamp(12px, 2.4vw, 28px);

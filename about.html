@@ -7,7 +7,7 @@
 <script src="theme-init.js?v=1">
 </script>
 <title>课题组介绍 | AIMG</title>
-<link rel="stylesheet" href="styles.css?v=ivory">
+<link rel="stylesheet" href="styles.css?v=demo">
 </head>
 <body data-title-zh="课题组介绍" data-title-en="About the group">
 <a class="skip" href="#main" data-zh="跳至内容" data-en="Skip to content">跳至内容</a>
@@ -64,10 +64,10 @@
 </div>
 </section>
 <section class="group-film container" aria-labelledby="film-title">
-<h2 id="film-title" data-zh="课题组视频" data-en="Group video">课题组视频</h2>
+<h2 id="film-title" data-zh="演示视频" data-en="Demo video">演示视频</h2>
 <video controls playsinline preload="metadata" width="1920" height="1070" poster="assets/hero-poster.jpg" aria-labelledby="film-title">
 <source src="assets/hero-web.mp4" type="video/mp4">
-<a href="assets/hero-web.mp4" data-zh="打开课题组视频" data-en="Open the group video">打开课题组视频</a>
+<a href="assets/hero-web.mp4" data-zh="打开演示视频" data-en="Open the demo video">打开演示视频</a>
 </video>
 </section>
 <section class="section selected" id="selected-publications" aria-labelledby="selected-title">
@@ -75,6 +75,10 @@
 <div class="publication-stage">
 <div class="section-title">
   <h2 id="selected-title" data-zh="研究成果" data-en="Selected research">研究成果</h2>
+  <div class="publication-controls" hidden>
+    <button type="button" class="publication-prev" aria-controls="publication-track" aria-label="上一篇论文" data-aria-zh="上一篇论文" data-aria-en="Previous paper" aria-disabled="true"><span class="publication-arrow" aria-hidden="true"></span></button>
+    <button type="button" class="publication-next" aria-controls="publication-track" aria-label="下一篇论文" data-aria-zh="下一篇论文" data-aria-en="Next paper"><span class="publication-arrow" aria-hidden="true"></span></button>
+  </div>
 </div>
 <div class="publication-track" id="publication-track" tabindex="0" role="group" aria-label="横向浏览精选论文" data-aria-zh="横向浏览精选论文" data-aria-en="Browse selected papers horizontally">
 <article class="publication-card">
@@ -202,7 +206,7 @@
 </div>
 </div>
 </footer>
-<script src="app.js?v=ivory">
+<script src="app.js?v=demo">
 </script>
 </body>
 </html>

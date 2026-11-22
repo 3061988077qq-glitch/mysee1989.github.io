@@ -160,6 +160,9 @@
   if (publicationTrack) {
     const cards = [...publicationTrack.querySelectorAll('.publication-card')];
     const pagination = document.querySelector('.publication-pagination');
+    const controls = document.querySelector('.publication-controls');
+    const previous = controls?.querySelector('.publication-prev');
+    const next = controls?.querySelector('.publication-next');
     const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
     const last = cards.length - 1;
     let active = -1;
@@ -181,6 +184,8 @@
     function setActive(index) {
       if (index === active) return;
       active = index;
+      previous?.setAttribute('aria-disabled', String(index === 0));
+      next?.setAttribute('aria-disabled', String(index === last));
       cards.forEach((card, cardIndex) => {
         const current = cardIndex === active;
         card.toggleAttribute('data-active', current);
@@ -216,6 +221,8 @@
       syncScroll();
     }
 
+    previous?.addEventListener('click', () => goTo(active - 1));
+    next?.addEventListener('click', () => goTo(active + 1));
     publicationTrack.addEventListener('click', event => {
       if (event.detail === 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       const index = cards.indexOf(event.target.closest('.publication-card'));
@@ -243,13 +250,14 @@
     for (const event of ['wheel', 'pointerdown']) {
       publicationTrack.addEventListener(event, clearDestination, { passive: true });
     }
-    publicationTrack.addEventListener('scrollend', () => {
-      clearDestination();
-      syncScroll();
+    publicationTrack.addEventListener('scrollend', syncScroll);
+    const observer = new ResizeObserver(() => {
+      measureStops();
+      if (destination !== null) goTo(destination, false);
     });
-    const observer = new ResizeObserver(measureStops);
     observer.observe(publicationTrack);
     measureStops();
+    if (controls) controls.hidden = last < 1;
     pagination.hidden = last < 1;
     publicationTrack.classList.add('is-ready');
   }
